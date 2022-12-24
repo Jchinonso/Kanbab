@@ -14,6 +14,14 @@ const StyledImageContainer = styled.div`
   position: absolute;
   left: calc(35% - 754px / 2);
   top: calc(50% - 254px / 2);
+<<<<<<< Updated upstream
+=======
+
+  @media (max-width: 1200px) {
+    left: 19%;
+    top: 16%;
+  }
+>>>>>>> Stashed changes
 `;
 const StyledImage = styled.img`
   width: 100%;
@@ -25,7 +33,7 @@ const StyledHeading = styled.h1`
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
-  font-size: 48px;
+  font-size: 3em;
   line-height: 120%;
   margin: 0;
   letter-spacing: -0.05em;
