@@ -8,7 +8,7 @@ import {
   StyledHeading,
   StyledImage,
   StyledErrorMessage,
-  StyledImageContainer,
+  StyledContent,
   StyledInput,
 } from "./StyledRepositoryForm";
 
@@ -25,7 +25,7 @@ export const GitHubRepositoryForm: React.FC = () => {
 
     const match = repositoryUrl.match(repositoryUrlRegex);
     if (!match) {
-      setError("Invalid repository URL");
+      setError("Ops! Something went wrong. Try again.");
       return;
     }
     const { owner, repo } = match.groups;
@@ -34,26 +34,26 @@ export const GitHubRepositoryForm: React.FC = () => {
 
   return (
     <StyledContainer>
-      <StyledImageContainer>
+      <StyledContent>
         <StyledImage src="/../svgs/logo.svg" alt="Description of the image" />
-      </StyledImageContainer>
-      <StyledFormContainer>
-        <StyledHeading>Start by pasting the repository URL.</StyledHeading>
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <StyledForm onSubmit={handleClick}>
-            <StyledInput
-              type="text"
-              name="repositoryUrl"
-              id="repositoryUrl"
-              value={repositoryUrl}
-              placeholder="https://"
-              onChange={(event) => setRepositoryUrl(event.target.value)}
-            />
-            <StyledButton type="submit">Submit</StyledButton>
-          </StyledForm>
-          {error && <StyledErrorMessage>{error}</StyledErrorMessage>}
-        </div>
-      </StyledFormContainer>
+        <StyledFormContainer>
+          <StyledHeading>Start by pasting the repository URL.</StyledHeading>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <StyledForm onSubmit={handleClick}>
+              <StyledInput
+                type="text"
+                name="repositoryUrl"
+                id="repositoryUrl"
+                value={repositoryUrl}
+                placeholder="https://"
+                onChange={(event) => setRepositoryUrl(event.target.value)}
+              />
+              <StyledButton type="submit">Submit</StyledButton>
+            </StyledForm>
+            {error && <StyledErrorMessage>{error}</StyledErrorMessage>}
+          </div>
+        </StyledFormContainer>
+      </StyledContent>
     </StyledContainer>
   );
 };

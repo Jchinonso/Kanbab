@@ -1,23 +1,24 @@
 import styled from "styled-components";
 
 const StyledContainer = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
+  height: 100vh;
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
-  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
 `;
 
-const StyledImageContainer = styled.div`
-  position: absolute;
-  left: calc(35% - 754px / 2);
-  top: calc(50% - 254px / 2);
+const StyledContent = styled.div`
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  gap: 220px;
 `;
+
+const StyledImageContainer = styled.div``;
 const StyledImage = styled.img`
-  width: 100%;
-  height: auto;
+  display: flex;
+  align-self: flex-start;
 `;
 const StyledHeading = styled.h1`
   width: 480px;
@@ -35,29 +36,14 @@ const StyledHeading = styled.h1`
   flex-grow: 0;
 `;
 
-// display: flex;
-// flex-direction: column;
-// align-items: flex-start;
-// padding: 0px;
-// gap: 100px;
-
-// position: absolute;
-// width: 754px;
-// height: 254px;
-// left: calc(50% - 754px/2 + 194px);
-// top: calc(50% - 254px/2);
-
 const StyledFormContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
   gap: 100px;
-  position: absolute;
   width: 754px;
   height: 254px;
-  left: calc(50% - 754px / 2 + 194px);
-  top: calc(50% - 254px / 2);
 `;
 // styled components
 const StyledForm = styled.form`
@@ -97,13 +83,24 @@ const StyledButton = styled.button`
   height: 38px;
   background: #eeeeee;
   border-radius: 4px;
+  border: none;
+  outline: none;
   flex: none;
   order: 1;
   flex-grow: 0;
 `;
 
 const StyledErrorMessage = styled.p`
-  color: #ff0000;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: -0.0125em;
+  color: #d62617;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
 `;
 
 export {
@@ -116,4 +113,5 @@ export {
   StyledErrorMessage,
   StyledInput,
   StyledImageContainer,
+  StyledContent,
 };
