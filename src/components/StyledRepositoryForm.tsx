@@ -14,12 +14,6 @@ const StyledImageContainer = styled.div`
   position: absolute;
   left: calc(35% - 754px / 2);
   top: calc(50% - 254px / 2);
-
-  @media (max-width: 1200px) {
-    left: 19%;
-    top: 16%;
-    width: 100%;
-  }
 `;
 const StyledImage = styled.img`
   width: 100%;
@@ -39,9 +33,6 @@ const StyledHeading = styled.h1`
   flex: none;
   order: 0;
   flex-grow: 0;
-  @media (max-width: 600px) {
-    font-size: 36;
-  }
 `;
 
 // display: flex;
@@ -72,9 +63,6 @@ const StyledFormContainer = styled.div`
 const StyledForm = styled.form`
   display: flex;
   flex-direction: row;
-  @media (max-width: 600px) {
-    flex-direction: column;
-  }
 `;
 
 const StyledInput = styled.input`
@@ -112,9 +100,6 @@ const StyledButton = styled.button`
   flex: none;
   order: 1;
   flex-grow: 0;
-  @media (max-width: 600px) {
-    margin: 10px 0;
-  }
 `;
 
 const StyledErrorMessage = styled.p`
