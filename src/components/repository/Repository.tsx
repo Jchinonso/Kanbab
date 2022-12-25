@@ -5,7 +5,12 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import { Board } from "../board";
 import { ColumnProps } from "../../types";
 import { updateColumnCards, getCoordinates } from "../../utils";
-import { StyledHeading, StyledSubHeading } from "./StyledRepository";
+import {
+  StyledHeading,
+  StyledSubHeading,
+  StyledContainer,
+  StyledHeaderContainer,
+} from "./StyledRepository";
 
 export const Repository: React.FC = () => {
   const { state } = useLocation();
@@ -32,25 +37,17 @@ export const Repository: React.FC = () => {
 
   return (
     <DndProvider backend={HTML5Backend}>
-      <div style={{ height: "100vh" }}>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            marginTop: "4.25em"
-          }}
-        >
+      <StyledContainer>
+        <StyledHeaderContainer>
           <StyledHeading>{state.repo}</StyledHeading>
           <StyledSubHeading>
             A component toolkit for creating live-running code editing
             experiences, using the power of CodeSandbox.
           </StyledSubHeading>
-        </div>
+        </StyledHeaderContainer>
 
         <Board columns={columns} moveCard={moveCard} />
-      </div>
+      </StyledContainer>
     </DndProvider>
   );
 };

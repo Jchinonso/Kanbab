@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledColumn = styled.div`
   display: flex;
@@ -6,7 +6,16 @@ export const StyledColumn = styled.div`
   gap: 0.625em;
   width: 367px;
   height: 470px;
-  overflow: auto
+  overflow-y: scroll;
+  ${css`
+    ::-webkit-scrollbar {
+      width: 0;
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #ff0000;
+    }
+  `}
 `;
 
 export const StyledColumnTitle = styled.div`

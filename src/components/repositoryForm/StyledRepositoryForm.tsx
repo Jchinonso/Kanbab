@@ -86,9 +86,8 @@ const StyledButton = styled.button`
   border-radius: 4px;
   border: none;
   outline: none;
-  flex: none;
   order: 1;
-  flex-grow: 0;
+  cursor: pointer;
 `;
 
 const StyledErrorMessage = styled.p`

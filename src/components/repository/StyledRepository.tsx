@@ -25,3 +25,14 @@ export const StyledSubHeading = styled.h2`
   color: #515151;
 `;
 
+export const StyledContainer = styled.div`
+  height: 100vh;
+`;
+
+export const StyledHeaderContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4.25em;
+`;

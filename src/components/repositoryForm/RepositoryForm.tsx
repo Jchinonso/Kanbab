@@ -38,7 +38,7 @@ export const RepositoryForm: React.FC = () => {
       throw new Error("Ops! Something went wrong. Try again.");
     } finally {
       setIsLoading(false);
-      setRepositoryUrl("")
+      setRepositoryUrl("");
     }
   }, []);
 
@@ -79,7 +79,11 @@ export const RepositoryForm: React.FC = () => {
                 placeholder="https://"
                 onChange={(event) => setRepositoryUrl(event.target.value)}
               />
-              <StyledButton type="submit" data-testid="submit-button">
+              <StyledButton
+                type="submit"
+                data-testid="submit-button"
+                disabled={isLoading}
+              >
                 {isLoading ? "Loading..." : "Submit"}
               </StyledButton>
             </StyledForm>

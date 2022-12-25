@@ -24,12 +24,10 @@ export const StyledCard = styled.div`
     `};
 
   &:hover {
-    background: #D1D1D1;
+    background: #d1d1d1;
   }
 `;
-export const StyledImage = styled.img`
-
-`;
+export const StyledImage = styled.img``;
 export const StyledCardTitle = styled.div`
   font-family: "Inter";
   font-style: normal;
@@ -37,7 +35,6 @@ export const StyledCardTitle = styled.div`
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 200px;
   font-size: 1em;
   line-height: 140%;
   letter-spacing: -0.0125em;
