@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const StyledColumn = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0px;
   gap: 10px;
   width: 367px;
   height: 470px;

@@ -29,7 +29,6 @@ export const RepositoryForm: React.FC = () => {
         `https://api.github.com/repos/${owner}/${repo}/branches`
       );
       const data = await response.json();
-      console.log(response, "=======response")
       if (response.status === 200) {
         return formatCards(columns, data, 0);
       } else {
@@ -55,7 +54,7 @@ export const RepositoryForm: React.FC = () => {
         const { groups } = match;
         const { owner, repo } = groups;
         const data = await fetchBranches(owner, repo);
-       
+
         navigate(`/board`, { state: { columns: data, owner, repo } });
       } catch (e) {
         setError(e.message);
@@ -84,7 +83,11 @@ export const RepositoryForm: React.FC = () => {
                 {isLoading ? "Loading..." : "Submit"}
               </StyledButton>
             </StyledForm>
-            {error && <StyledErrorMessage data-testid="error-message">{error}</StyledErrorMessage>}
+            {error && (
+              <StyledErrorMessage data-testid="error-message">
+                {error}
+              </StyledErrorMessage>
+            )}
           </div>
         </StyledFormContainer>
       </StyledContent>

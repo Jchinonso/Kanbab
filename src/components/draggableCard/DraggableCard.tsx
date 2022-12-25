@@ -1,7 +1,11 @@
 import { useRef } from "react";
 import { useDrag, useDrop, DragSourceMonitor } from "react-dnd";
 import { DraggableCardProps } from "../../types";
-import { StyledCard, StyledCardTitle } from "./StyledDraggableCard";
+import {
+  StyledCard,
+  StyledCardTitle,
+  StyledImage,
+} from "./StyledDraggableCard";
 
 export const DraggableCard = (props: DraggableCardProps) => {
   const [{ isDragging }, dragRef] = useDrag({
@@ -24,7 +28,15 @@ export const DraggableCard = (props: DraggableCardProps) => {
   dropRef(ref);
   return (
     <StyledCard ref={ref} isDragging={isDragging} isSpacer={props.isSpacer}>
+      <StyledImage
+        src="/../svgs/arrow-left.svg"
+        alt="Description of the image"
+      />
       <StyledCardTitle>{props.name}</StyledCardTitle>
+      <StyledImage
+        src="/../svgs/arrow-right.svg"
+        alt="Description of the image"
+      />
     </StyledCard>
   );
 };

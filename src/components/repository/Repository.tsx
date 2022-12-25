@@ -41,7 +41,7 @@ export const Repository: React.FC = () => {
             alignItems: "center",
           }}
         >
-          <StyledHeading>sandpack</StyledHeading>
+          <StyledHeading>{state.repo}</StyledHeading>
           <StyledSubHeading>
             A component toolkit for creating live-running code editing
             experiences, using the power of CodeSandbox.
