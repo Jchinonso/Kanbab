@@ -12,6 +12,7 @@ export interface CardProps {
 
 export interface DraggableCardProps extends Partial<CardProps> {
   isSpacer?: boolean;
+  title?: string;
   moveCard: (draggingItemId: string, coordinates: [number, number]) => void;
 }
 

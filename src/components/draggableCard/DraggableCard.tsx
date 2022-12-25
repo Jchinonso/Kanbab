@@ -1,42 +1,40 @@
 import { useRef } from "react";
-import { useDrag, useDrop, DragSourceMonitor } from "react-dnd";
 import { DraggableCardProps } from "../../types";
+import { useCardDrag, useCardDrop } from "../../hooks";
 import {
   StyledCard,
   StyledCardTitle,
   StyledImage,
 } from "./StyledDraggableCard";
+import { shouldRenderLeftArrow, shouldRenderRightArrow } from "../../utils";
 
 export const DraggableCard = (props: DraggableCardProps) => {
-  const [{ isDragging }, dragRef] = useDrag({
-    type: "Card",
-    item: { id: props.id }, // full property definition with colon
-    canDrag: () => !props.isSpacer,
-    collect: (monitor: DragSourceMonitor) => ({
-      isDragging: monitor.isDragging(),
-    }),
-  });
-  const [, dropRef] = useDrop({
-    accept: "Card",
-    hover: (item: { id: string; type: string }) => {
-      const coord = props.coordinates;
-      if (item.id !== props.id) props.moveCard(item.id, coord);
-    },
-  });
   const ref = useRef(null);
-  dragRef(ref);
+  const [isDragging, dragRef] = useCardDrag(props);
+  const dropRef = useCardDrop(props);
+  if (typeof dragRef === "function") {
+    dragRef(ref);
+  }
   dropRef(ref);
   return (
     <StyledCard ref={ref} isDragging={isDragging} isSpacer={props.isSpacer}>
-      <StyledImage
-        src="/../svgs/arrow-left.svg"
-        alt="Description of the image"
-      />
+      {shouldRenderLeftArrow(props.title) ? (
+        <StyledImage
+          src="/../svgs/arrow-left.svg"
+          alt="Description of the image"
+        />
+      ) : (
+        <div></div>
+      )}
       <StyledCardTitle>{props.name}</StyledCardTitle>
-      <StyledImage
-        src="/../svgs/arrow-right.svg"
-        alt="Description of the image"
-      />
+      {shouldRenderRightArrow(props.title) ? (
+        <StyledImage
+          src="/../svgs/arrow-right.svg"
+          alt="Description of the image"
+        />
+      ) : (
+        <div></div>
+      )}
     </StyledCard>
   );
 };

@@ -3,6 +3,8 @@ import { DraggableCard } from "../draggableCard";
 import { BoardProps } from "../../types";
 import { StyledContainer } from "./StyledBoard";
 
+
+
 export const Board = ({ columns, moveCard }: BoardProps) => {
   return (
     <StyledContainer>
@@ -18,6 +20,7 @@ export const Board = ({ columns, moveCard }: BoardProps) => {
                     key={id}
                     name={name}
                     id={id}
+                    title={title}
                     coordinates={[x, y]}
                     moveCard={moveCard}
                   />

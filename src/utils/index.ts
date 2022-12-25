@@ -44,3 +44,12 @@ export const columns = [
   { id: uuidv4(), title: "Review", cards: [] },
   { id: uuidv4(), title: "Ready to Merge", cards: [] },
 ]
+
+
+export const shouldRenderLeftArrow = (title) => {
+  return title === "Ready to Merge" || title === "Review";
+};
+
+export const shouldRenderRightArrow = (title) => {
+  return title === "In Progress" || title === "Review";
+};
