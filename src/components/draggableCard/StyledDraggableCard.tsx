@@ -5,12 +5,11 @@ export const StyledCard = styled.div`
   flex-direction: row;
   justify-content: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 1.5em;
   background: #eeeeee;
   color: #f4fffd;
   border-radius: 5px;
   cursor: move;
-
   ${(props) =>
     props.isDragging &&
     css`
@@ -29,14 +28,17 @@ export const StyledCard = styled.div`
   }
 `;
 export const StyledImage = styled.img`
-  display: flex;
-  align-self: flex-start;
+
 `;
 export const StyledCardTitle = styled.div`
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 200px;
+  font-size: 1em;
   line-height: 140%;
   letter-spacing: -0.0125em;
   color: #515151;

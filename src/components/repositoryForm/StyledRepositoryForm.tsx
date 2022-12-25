@@ -1,3 +1,4 @@
+
 import styled from "styled-components";
 
 const StyledContainer = styled.div`
@@ -12,7 +13,7 @@ const StyledContent = styled.div`
   max-width: 1200px;
   display: flex;
   flex-direction: row;
-  gap: 220px;
+  gap: 13.75em;
 `;
 
 const StyledImageContainer = styled.div``;
@@ -26,7 +27,7 @@ const StyledHeading = styled.h1`
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
-  font-size: 48px;
+  font-size: 3em;
   line-height: 120%;
   margin: 0;
   letter-spacing: -0.05em;
@@ -41,7 +42,7 @@ const StyledFormContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
-  gap: 100px;
+  gap: 6.25em;
   width: 754px;
   height: 254px;
 `;
@@ -55,7 +56,7 @@ const StyledInput = styled.input`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5em;
   width: 660px;
   margin-right: 10px;
   height: 33px;
@@ -77,8 +78,8 @@ const StyledButton = styled.button`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 8px 16px;
-  gap: 8px;
+  padding: 0.5em 1em;
+  gap: 0.5em;
   width: 84px;
   height: 38px;
   background: #eeeeee;
@@ -94,7 +95,7 @@ const StyledErrorMessage = styled.p`
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1em;
   line-height: 140%;
   letter-spacing: -0.0125em;
   color: #d62617;

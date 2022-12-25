@@ -38,6 +38,7 @@ export const RepositoryForm: React.FC = () => {
       throw new Error("Ops! Something went wrong. Try again.");
     } finally {
       setIsLoading(false);
+      setRepositoryUrl("")
     }
   }, []);
 
@@ -54,7 +55,6 @@ export const RepositoryForm: React.FC = () => {
         const { groups } = match;
         const { owner, repo } = groups;
         const data = await fetchBranches(owner, repo);
-
         navigate(`/board`, { state: { columns: data, owner, repo } });
       } catch (e) {
         setError(e.message);

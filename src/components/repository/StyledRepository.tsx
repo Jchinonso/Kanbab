@@ -6,8 +6,8 @@ export const StyledHeading = styled.h1`
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
-  font-size: 48px;
-  margin-bottom: 20px;
+  font-size: 3em;
+  margin-bottom: 0.17em;
   line-height: 100%;
   letter-spacing: -0.05em;
   color: #151515;
@@ -19,8 +19,9 @@ export const StyledSubHeading = styled.h2`
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875em;
   line-height: 140%;
   letter-spacing: -0.0125em;
   color: #515151;
 `;
+

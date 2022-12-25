@@ -21,7 +21,7 @@ export const DraggableCard = (props: DraggableCardProps) => {
       {shouldRenderLeftArrow(props.title) ? (
         <StyledImage
           src="/../svgs/arrow-left.svg"
-          alt="Description of the image"
+          alt="left arrow"
         />
       ) : (
         <div></div>
@@ -30,7 +30,7 @@ export const DraggableCard = (props: DraggableCardProps) => {
       {shouldRenderRightArrow(props.title) ? (
         <StyledImage
           src="/../svgs/arrow-right.svg"
-          alt="Description of the image"
+          alt="right arrow"
         />
       ) : (
         <div></div>

@@ -39,6 +39,7 @@ export const Repository: React.FC = () => {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
+            marginTop: "4.25em"
           }}
         >
           <StyledHeading>{state.repo}</StyledHeading>

@@ -9,12 +9,14 @@ export const Column = (
   }
 ) => {
   return (
-    <StyledColumn>
+    <div>
       <StyledColumnTitle>
         {props.title}
         {` (${props.numOfItems})`}
       </StyledColumnTitle>
+      <StyledColumn>
       {props.children}
-    </StyledColumn>
+      </StyledColumn>
+    </div>
   );
 };
