@@ -3,15 +3,13 @@ import { DraggableCard } from "../draggableCard";
 import { BoardProps } from "../../types";
 import { StyledContainer } from "./StyledBoard";
 
-
-
 export const Board = ({ columns, moveCard }: BoardProps) => {
   return (
     <StyledContainer>
       {columns.map((column, x) => {
         const { id, title, cards } = column;
         return (
-          <Column key={id} title={title}>
+          <Column key={id} title={title} numOfItems={cards.length}>
             {column.cards.length ? (
               cards.map((card, y) => {
                 const { id, name } = card;

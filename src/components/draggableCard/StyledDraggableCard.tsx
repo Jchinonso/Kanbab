@@ -5,7 +5,7 @@ export const StyledCard = styled.div`
   flex-direction: row;
   justify-content: center;
   justify-content: space-between;
-  padding: 15px;
+  padding: 20px;
   background: #eeeeee;
   color: #f4fffd;
   border-radius: 5px;
@@ -23,6 +23,10 @@ export const StyledCard = styled.div`
       cursor: initial;
       opacity: 0;
     `};
+
+  &:hover {
+    background: #D1D1D1;
+  }
 `;
 export const StyledImage = styled.img`
   display: flex;

@@ -7,6 +7,7 @@ export const StyledHeading = styled.h1`
   font-style: normal;
   font-weight: 600;
   font-size: 48px;
+  margin-bottom: 20px;
   line-height: 100%;
   letter-spacing: -0.05em;
   color: #151515;
