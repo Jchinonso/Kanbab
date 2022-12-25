@@ -1,18 +1,13 @@
-import { Column } from "./KanbanColumn";
-import { DraggableCard } from "./DraggableCard";
-import { ColumnProps } from "../types";
-
-interface BoardProps {
-  columns: ColumnProps[];
-  moveCard: (draggingItemId: string, coordinates: [number, number]) => void;
-}
+import { Column } from "../kanbanColumn/KanbanColumn";
+import { DraggableCard } from "../draggableCard";
+import { BoardProps } from "../../types";
+import { StyledContainer } from "./StyledBoard";
 
 export const Board = ({ columns, moveCard }: BoardProps) => {
   return (
-    <div className="Board">
+    <StyledContainer>
       {columns.map((column, x) => {
         const { id, title, cards } = column;
-
         return (
           <Column key={id} title={title}>
             {column.cards.length ? (
@@ -38,6 +33,6 @@ export const Board = ({ columns, moveCard }: BoardProps) => {
           </Column>
         );
       })}
-    </div>
+    </StyledContainer>
   );
 };

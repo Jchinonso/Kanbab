@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Repository } from "./components/Repository";
+import { Repository } from "./components/repository";
 
-import { GitHubRepositoryForm } from "./components/RepositoryForm";
+import { RepositoryForm } from "./components/repositoryForm/RepositoryForm";
 
 const App: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const App: React.FC = () => {
           path="/board"
           element={<Repository />}
         ></Route>
-        <Route path="/" element={<GitHubRepositoryForm />}></Route>
+        <Route path="/" element={<RepositoryForm />}></Route>
       </Routes>
     </Router>
   );

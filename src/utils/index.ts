@@ -37,3 +37,10 @@ export const getCoordinates = (columns: ColumnProps[], cardId: string) => {
 
   return [x, y];
 };
+
+
+export const columns = [
+  { id: uuidv4(), title: "In Progress", cards: [] },
+  { id: uuidv4(), title: "Review", cards: [] },
+  { id: uuidv4(), title: "Ready to Merge", cards: [] },
+]
