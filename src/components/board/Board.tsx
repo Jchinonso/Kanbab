@@ -1,5 +1,5 @@
 import { Column } from "../kanbanColumn/KanbanColumn";
-import { DraggableCard } from "../draggableCard";
+import { DraggableCard } from "../DraggableCard";
 import { BoardProps } from "../../types";
 import { StyledContainer } from "./StyledBoard";
 

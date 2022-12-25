@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
-import { Board } from "../board";
+import { Board } from "../Board";
 import { ColumnProps } from "../../types";
 import { updateColumnCards, getCoordinates } from "../../utils";
 import {

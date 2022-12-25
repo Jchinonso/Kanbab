@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Repository } from "./components/repository";
+import { Repository } from "./components/Repository";
 
-import { RepositoryForm } from "./components/repositoryForm/RepositoryForm";
+import { RepositoryForm } from "./components/RepositoryForm/RepositoryForm";
 
 const App: React.FC = () => {
   return (
