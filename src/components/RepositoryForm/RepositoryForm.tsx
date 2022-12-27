@@ -35,7 +35,7 @@ export const RepositoryForm: React.FC = () => {
         throw new Error("Ops! Something went wrong. Try again.");
       }
     } catch (e) {
-      throw new Error("Ops! Something went wrong. Try again.");
+      throw e;
     } finally {
       setIsLoading(false);
       setRepositoryUrl("");
